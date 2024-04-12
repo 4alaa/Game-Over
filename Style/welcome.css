@@ -1,0 +1,329 @@
+*
+{
+    box-sizing: border-box;
+}
+body
+{
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family:Lobster ;
+    src: url(../webfonts/Lobster-Regular.ttf);
+}
+:root
+{
+    --game-color: rgb(220,53,69)
+}
+/*  */
+nav
+{
+    font-family:Lobster ;
+    font-size: 20px;
+}
+.navbar
+{
+  background-color: rgb(242,248,210) !important;
+    height: 100px !important;
+
+
+}
+.navbar-brand img
+{
+  width: 150px;
+  /* height: 20px !important; */
+}
+.home
+{
+    height: 45vh;
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../imgs/space-illustration-night-alien-fantasy-landscape_33099-1873.avif);
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+}
+/* .home h2
+{
+    margin-top: 55px;
+} */
+.owl-carousel 
+{
+ position: absolute;
+ bottom: 0;   
+}
+.item
+{
+    border: 5px solid gray;
+    border-radius: 15px;
+}
+.badge-color
+{
+    background-color: gray;
+    color: white;
+}
+figcaption h3
+{
+    color: var(--game-color) !important;
+}
+.modal-header
+{
+    border: none !important;
+
+}
+.card
+{
+    cursor: pointer;
+}
+/* .cardImg
+{
+    width: 100% !important;
+    object-fit: cover !important;
+} */
+.modal-body
+{
+    background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),url(../imgs/man-wearing-vr-glasses-gaming.jpg) ;
+    /* background-image: url(../imgs/man-wearing-vr-glasses-gaming.jpg); */
+    background-size: cover !important;
+    background-position: center center !important;
+    color: white !important; 
+
+}
+
+
+/* The switch - the box around the slider */
+#theme-toggle-button {
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 5em;
+    cursor: pointer;
+  }
+  
+  /* Hide default HTML checkbox */
+  #toggle {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  #container,
+  #patches,
+  #stars,
+  #button,
+  #sun,
+  #moon,
+  #cloud {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 0.25s;
+  }
+  
+  /* night sky background */
+  #toggle:checked + svg #container {
+    fill: #2b4360;
+  }
+  
+  /* move button to right when checked */
+  #toggle:checked + svg #button {
+    transform: translate(28px, 2.333px);
+  }
+  
+  /* show/hide sun and moon based on checkbox state */
+  #sun {
+    opacity: 1;
+  }
+  
+  #toggle:checked + svg #sun {
+    opacity: 0;
+  }
+  
+  #moon {
+    opacity: 0;
+  }
+  
+  #toggle:checked + svg #moon {
+    opacity: 1;
+  }
+  
+  /* show or hide background items on checkbox state */
+  #cloud {
+    opacity: 1;
+  }
+  
+  #toggle:checked + svg #cloud {
+    opacity: 0;
+  }
+  
+  #stars {
+    opacity: 0;
+  }
+  
+  #toggle:checked + svg #stars {
+    opacity: 1;
+  }
+
+
+
+
+  
+.arrow-up
+{
+    padding: 15px;
+    background-color: red;
+    color: white;
+    font-size: 20px;
+    border-radius: 20px;
+    position: fixed;
+    bottom: 2%;
+    right: 1.2%;
+    cursor: pointer;
+    transition:background-color 0 .8s ;
+    display: none ;
+    /* z-index: 9999999999999; */
+
+}
+.arrow-up i
+{
+    transition: color 0.8s ;
+
+}
+.arrow-up:hover i
+{
+    color: white;
+}
+.arrow-up:hover
+{
+    background-color: tomato;
+
+}
+
+
+body[light-mode="dark"] {
+    background-color: rgb(39,43,48);
+    color: white !important;
+
+}
+
+body[light-mode="light"] {
+    background-color: white;
+
+}
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: inline-block;
+    border-top: 4px solid #FFF;
+    border-right: 4px solid transparent;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+  }
+  .loader::after {
+    content: '';  
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border-left: 4px solid #FF3D00;
+    border-bottom: 4px solid transparent;
+    animation: rotation 0.5s linear infinite reverse;
+  }
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  } 
+  .loading
+  {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+
+}
+.loadingDetails
+{
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden !important;
+
+}
+
+
+
+
+
+/* for close btn */
+.modal .outer {
+  position: relative;
+  /* margin: 0 auto; */
+  width: 35px;
+  cursor: pointer;
+  right: 30px;
+}
+
+.modal .inner {
+  width: inherit;
+  text-align: center;
+}
+
+.modal label { 
+  font-size: .8em; 
+  line-height: 4em;
+  text-transform: uppercase;
+  color: black;
+  transition: all .3s ease-in;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.modal .inner:before, .inner:after {
+  position: absolute;
+  content: '';
+  height: 1px;
+  width: inherit;
+  background: red;
+  left: 0;
+  transition: all .3s ease-in;
+}
+
+.modal .inner:before {
+  top: 50%; 
+  transform: rotate(45deg);  
+}
+
+.modal .inner:after {  
+  bottom: 50%;
+  transform: rotate(-45deg);  
+}
+
+.modal .outer:hover label {
+  opacity: 1;
+}
+
+.modal .outer:hover .inner:before,
+.modal .outer:hover .inner:after {
+  transform: rotate(0);
+}
+
+.modal .outer:hover .inner:before {
+  top: 0;
+}
+
+.modal .outer:hover .inner:after {
+  bottom: 0;
+}

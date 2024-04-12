@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register/login page</title>
+    <!-- link of favico -->
+
+    <!-- for fancy css -->
+    <link rel="stylesheet" href="Style/fancy/fancybox.css">
+
+    <!-- link of fontawesome -->
+    <link rel="stylesheet" href="Style/all.min.css">
+    <!-- link of bootstrap -->
+    <link rel="stylesheet" href="Style/bootstrap.min.css">
+    <!-- link of css -->
+    <link rel="stylesheet" href="Style/style.css">
+</head>
+<body>
+
+
+   
+
+
+    <div class="container" id="container">
+        <div class="form-container sign-up">
+            <form>
+                <h5>Create Account</h5>
+                <input type="text" placeholder="Name" id="registerNameInput"  class=" form-control ">
+                <div class="alert nameAlert d-none alert-danger mb-0" role="alert">
+                    Name is already exist !!
+                  </div>
+                  <div class="alert nameregex d-none alert-danger mb-0" role="alert">
+                    start with small character and [2-9] any inputs
+                 </div>
+                <input type="email" placeholder="Email" id="registerEmailInput"  class=" form-control ">
+                <div class="alert emailAlert d-none alert-danger mb-0" role="alert">
+                    Email is already exist !!
+                  </div>
+                  <div class="alert emailRegex d-none alert-danger mb-0" role="alert">
+                   AnyInput@gmail.com
+                  </div>
+                <input type="password" placeholder="Password" id="registerPassInput"  class=" form-control ">
+                <!-- regiser -->
+                <button type="button" id="signUpBtn">Sign Up</button>
+                <div class="alert successAlert d-none alert-success mt-2" role="alert">
+                   You register successfully
+                  </div>
+            </form>
+        </div>
+        <div class="form-container sign-in">
+            <form>
+                <img src="imgs/game-over.avif" class="img-over" alt="">
+                <h1>Sign In</h1>
+                <input type="email" placeholder="Email" class=" form-control " id="signInEmail">
+                <input type="password" placeholder="Password"  class=" form-control " id="signInpassword">
+                <div class="alert fillAlert d-none alert-danger m-0" role="alert">
+                   Fill The Inputs First !!
+                  </div>
+                <button type="button" id="signInBtn">Sign In</button>
+                <div class="alert errorLogin d-none alert-danger mt-2" role="alert">
+                    Error in Email or Password ! 
+                  </div>
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>Welcome Back!</h1>
+                    <p>Enter your personal details to use all of site features</p>
+                    <button class="hidden" id="login">Sign In</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>Hello, Friend!</h1>
+                    <p>Register with your personal details to use all of site features</p>
+                    <button class="hidden" id="register">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+ 
+ 
+
+        
+
+    <!-- link of bootstrap js -->
+    <script src="JS/bootstrap.bundle.min.js"></script>
+
+    
+  
+    <!-- link of mine js -->
+    <script src="JS/index.js"></script>
+
+</body>
+</html>
